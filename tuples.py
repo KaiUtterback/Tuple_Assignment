@@ -18,5 +18,10 @@ Task 1: Formatting Flight Itineraries
 '''
 
 def display_flight_information():
-    
+    flight_information = traveler, destination_1, destination_2
     traveler = input("Enter the Traveler's name: ")
+    destination_1 = input("Enter where you will be flying from: ")
+    destination_2 = input("Enter the destination you are flying to: ")
+    print(flight_information)
+
+display_flight_information()
