@@ -18,5 +18,5 @@ Task 1: Formatting Flight Itineraries
 '''
 
 def display_flight_information():
-
+    
     traveler = input("Enter the Traveler's name: ")
