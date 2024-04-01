@@ -16,12 +16,16 @@ Task 1: Formatting Flight Itineraries
         Itinerary 2: Bob - From Tokyo to San Francisco"    
 
 '''
+print()
 
-def display_flight_information():
-    flight_information = traveler, destination_1, destination_2
-    traveler = input("Enter the Traveler's name: ")
-    destination_1 = input("Enter where you will be flying from: ")
-    destination_2 = input("Enter the destination you are flying to: ")
-    print(flight_information)
+def format_flight_itineraries(flights):
+    formatted_itineraries = []
+    for i, itinerary in enumerate(flights, start=1):
+        traveler_name, origin, destination = itinerary
+        formatted_itinerary = f"Itinerary {i}: {traveler_name} - From {origin} to {destination}"
+        formatted_itineraries.append(formatted_itinerary)
+    return '\n'.join(formatted_itineraries)
 
-display_flight_information()
+flights = [("Alice", "New York", "London"), ("Bob", "Tokyo", "San Francisco")]
+formatted_flights = format_flight_itineraries(flights)
+print(formatted_flights)
