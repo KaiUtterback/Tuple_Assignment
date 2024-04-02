@@ -230,4 +230,113 @@ def run_event_data():
     list_attendees(attendees)
     count_event(attendees)
 
-run_event_data()
+#run_event_data()
+    
+'''4. Mastering Tuple Packing and Unpacking in Python
+Objective:
+    The goal of this assignment is to deepen your understanding of tuple packing and unpacking in Python.
+    You will apply these techniques in various practical scenarios, enhancing your ability to work with 
+    flexible data structures and improve data handling efficiency.
+
+Task 1: Customer Order Processing
+    Refine your skills in tuple unpacking by managing customer orders.
+
+Problem Statements:
+    You are given a list of tuples, each representing a customer's order. 
+    Each tuple contains the customer's name, the product ordered, and the quntity.
+    Your task is to unpack each tuple and print the order details in a user-friendly format.
+
+Sample Order Data:
+    orders = [
+    ("Alice", "Laptop", 1),
+    ("Bob", "Camera", 2),
+    # More Orders...
+    ]
+
+    - Write a function to iterate over the list of orders.
+    - Unpack each tuple in the list and format the details for display.    
+
+'''
+
+orders = [
+    ("Alice", "Laptop", 1),
+    ("Bob", "Camera", 2),
+    # More Orders...
+    ]
+
+def display_orders(orders):
+    for order in orders:
+        name, product, quantity = order
+        print(f"{name} purchased {quantity} {product}(s)")
+
+display_orders(orders)
+print()
+
+''' Task 2: Sorting and Filtering Contact Information
+Implement tuple packing and unpacking in sorting and filtering tasks.
+
+Problem Statement:
+    You have a list of contacts, where each contact is represented as a tuple containing a name, email, and phone number. 
+    Your task is to:
+
+    - Sort the Contacts by name
+    - Filter and display contacts whose name start with a specific letter
+
+Sample Data:
+
+contacts = [
+    ("Alice", "alice@email.com", "123-456-7890"),
+    ("Bob", "bob@email.com", "234-567-8901"),
+    # More contacts...
+]
+
+'''
+
+contacts = [
+    ("Alice", "alice@email.com", "123-456-7890"),
+    ("Bob", "bob@email.com", "234-567-8901"),
+    # More contacts...
+]
+
+sorted_contacts = sorted(contacts)
+
+specific_letter = 'A'  
+filtered_contacts = [contact for contact in sorted_contacts if contact[0].startswith(specific_letter)]
+
+for contact in filtered_contacts:
+    print(contact)
+print()
+
+'''5. Advanced Tuple Techniques: Joining and Nesting in Python
+Objective:
+    This assignment is designed to advance your understanding and application of joining and nesting tupleds in Python.
+    You will engage in tasks that require organizing and manipulating complex data structures, improving your problem-solving skills
+    in handling multi_dimensional data.
+
+Task 1: Product Catalog Merging
+    Utilize tuple joining to combine multiple product catalogs.
+
+Problem Statement:
+    You are managing the poroduct catalogs for an online store.
+    Each catalog is a tuple of products, and each product is a tuple containing the product name and price.
+    Merge multiple catalogs into a single tuple.
+
+    - Write a funciton to join two or more product catalogs into one.
+    - Display the combined catalog, ensuring that it maintains the order of products as they were in their original catalogs.
+
+Example Catalogs:
+
+catalog1 = (("Laptop", 1000), ("Camera", 500))
+catalog2 = (("Smartphone", 800), ("Tablet", 450))
+
+'''
+
+catalog1 = (("Laptop", 1000), ("Camera", 500))
+catalog2 = (("Smartphone", 800), ("Tablet", 450))
+
+def catalog_combiner():
+    combined_catalog = catalog1 + catalog2
+    for item, price in combined_catalog:
+        print(f"The {item} is ${price}")
+
+catalog_combiner()
