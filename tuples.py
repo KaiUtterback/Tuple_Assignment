@@ -30,7 +30,6 @@ def format_flight_itineraries(flights):
 flights = [("Alice", "New York", "London"), ("Bob", "Tokyo", "San Francisco")]
 formatted_flights = format_flight_itineraries(flights)
 print(formatted_flights)
-print()
 
 
 ''' 2: Python Data Structure Challenges in Real-World Scenarios
@@ -101,7 +100,8 @@ def run_library():
         else:
             print("Incorrect selection")
         
-# run_library()
+run_library()
+print()
 
 ''' 3. Python Loops and Tuples in Analytical Applications
 Objective:
@@ -182,7 +182,8 @@ def stock_program():
         else:
             print("That's not a correct entry, please try again")
 
-#stock_program()
+stock_program()
+print()
             
 ''' TASK 2: Event Attendance Tracker
 Apply Loops and tuples to track and report on event attendance.
@@ -230,7 +231,8 @@ def run_event_data():
     list_attendees(attendees)
     count_event(attendees)
 
-#run_event_data()
+run_event_data()
+print()
     
 '''4. Mastering Tuple Packing and Unpacking in Python
 Objective:
